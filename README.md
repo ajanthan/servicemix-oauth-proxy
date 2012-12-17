@@ -112,7 +112,7 @@ Running the sample:
 
 2.Call the web service and replace token with what you got from previous invocation.
 
-   curl -v -X POST -H "Authorization: Bearer 7d9aaf815555d983446db1c29bd7426" -H "Content-Type: application/x-www-form-urlenco" -d@sayHi.xml http://localhost:9181/cxf/HelloServiceProxy/sayHi
+   curl -v -X POST -H "Authorization: Bearer 7d9aaf815555d983446db1c29bd7426" -H "Content-Type: application/x-www-form-urlenco"  -d@sayHi.xml http://localhost:9181/cxf/HelloServiceProxy/sayHi
 
 
 
@@ -120,20 +120,12 @@ Running the sample:
 
 contents of sayHi.xml
 
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cxf="http://cxf.examples.servicemix.apache.org/">
-
-   <soapenv:Header/>
-
-   <soapenv:Body>
-
-      <cxf:sayHi>
-
-         <!--Optional:-->
-
-         <arg0>aja</arg0>
-
-      </cxf:sayHi>
-
-   </soapenv:Body>
-
-</soapenv:Envelope>
+    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cxf="http://cxf.examples.servicemix.apache.org/">
+     <soapenv:Header/>
+      <soapenv:Body>
+       <cxf:sayHi>
+        <!--Optional:-->
+        <arg0>aja</arg0>
+       </cxf:sayHi>
+     </soapenv:Body>
+    </soapenv:Envelope>
